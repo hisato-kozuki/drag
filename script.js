@@ -12,6 +12,9 @@ for(let i = 0; i < 4; i++){
         a.style="top: "+200*i+"px; left: "+200*j+"px; background-color: rgb("+i*32+",0,"+j*32+");";
         a.addEventListener("mousedown", down);
         a.addEventListener("mouseup", stop);
+        a.addEventListener("touchstart", down);
+        a.addEventListener("touchmove", drag);
+        a.addEventListener("touchend", stop);
         document.getElementsByTagName("body")[0].appendChild(a);
     }
 }
