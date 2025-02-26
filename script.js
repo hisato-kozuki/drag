@@ -20,23 +20,6 @@ for(let i = 0; i < 4; i++){
         document.getElementsByTagName("body")[0].appendChild(a);
     }
 }
-/*function logPosition1(event) {
-    event.preventDefault();
-    console.log(event);
-    mouse[0]=event.offsetX/width;
-    mouse[1]=event.offsetY/height;
-    console.log("offsetX: " + event.offsetX);
-    console.log("offsetY: " + event.offsetY);
-    document.getElementById("a").innerText=mouse[0]+" "+mouse[1];
-  }
-  function logPosition2(event) {
-    event.preventDefault();
-    console.log(event);
-    mouse[0]=event.changedTouches[0].pageX/width;
-    mouse[1]=event.changedTouches[0].pageY/height;
-    document.getElementById("a").innerText=mouse[0]+" "+mouse[1];
-  }*/
-document.onmousemove = drag;
 
 function down(event){
     console.log(event);
@@ -82,6 +65,7 @@ function drag(event){
 }
 
 function drag_s(event){
+    event.preventDefault();
     if(flag){
         mouse.x = event.changedTouches[0].pageX, mouse.y = event.changedTouches[0].pageY;
         console.log(box);
